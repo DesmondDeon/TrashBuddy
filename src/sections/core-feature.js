@@ -9,8 +9,6 @@ const data = {
   title: 'About Us',
   description:
     'Trash Buddy sets the bar for what constitutes proper service. Trash and recycling are collected five nights a week at Valet Living communities doorsteps. We can also tailor days and times to meet the specific requirements of your community. Looking for a trusted and effective trash collection service at your doorstep? Simply request a free quote for our services, and we will work with you to fulfill the needs of your community. From doorstep trash pickup and valet recycling to several bids for multiple communities in or out of the same area, we can provide all of the services your community demands.',
-  btnName: 'Get Started',
-  btnURL: '#',
 };
 
 export default function CoreFeature() {
@@ -22,8 +20,6 @@ export default function CoreFeature() {
           subTitle={data.subTitle}
           title={data.title}
           description={data.description}
-          btnName={data.btnName}
-          btnURL={data.btnURL}
         />
       </Box>
       <Box sx={styles.thumbnail}>

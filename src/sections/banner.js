@@ -16,7 +16,6 @@ export default function Banner() {
           <Text as="p" variant="heroSecondary">
             Trusted and effective trash collection service at your doorstep
           </Text>
-          <Button variant="primary">Get Started</Button>
         </Box>
         <Box sx={styles.banner.imageBox}>
           <Image src={BannerImg} alt='Photo by Jilbert Ebrahi'/>

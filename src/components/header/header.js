@@ -2,12 +2,20 @@
 import { jsx, Container, Flex, Button } from 'theme-ui';
 import { keyframes } from '@emotion/core';
 import { Link } from 'react-scroll';
+import { useState } from 'react';
 import Logo from 'components/logo';
 import LogoDark from 'assets/logo.svg';
 import MobileDrawer from './mobile-drawer';
 import menuItems from './header.data';
+import { path } from 'prettier';
+
 
 export default function Header({ className }) {
+  
+  const simulateCall = phoneNumber => window.open(`tel:${13525148291}`, '_self');
+
+  const callHandler = phoneNumber => { simulateCall(phoneNumber); };
+  
   return (
       <header sx={styles.header} className={className} id="header">
         <Container sx={styles.container}>
@@ -28,10 +36,14 @@ export default function Header({ className }) {
             ))}
 
           </Flex>
-          <Button className="donate__btn" variant="secondary" aria-label="Get A Quote">
+          <Button 
+            className="donate__btn" 
+            variant="secondary" 
+            aria-label="Get A Quote" 
+            onClick={callHandler}
+            >
               Get A Quote
           </Button>
-          <MobileDrawer />
         </Container>
 
       </header>
@@ -79,6 +91,15 @@ const styles = {
       },
     },
   },
+  modalBackground: {
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'rgba(200, 200, 200)',
+    position: 'relative',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItem: 'center',
+},
   container: {
     display: 'flex',
     alignItems: 'center',
